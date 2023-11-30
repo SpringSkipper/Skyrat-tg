@@ -295,7 +295,7 @@
 
 /obj/item/modular_computer/MouseDrop(obj/over_object, src_location, over_location)
 	var/mob/M = usr
-	if((!istype(over_object, /atom/movable/screen)) && usr.can_perform_action(src))
+	if((!istype(over_object, /atom/movable/screen)) && usr.can_perform_action(src, ALLOW_RESTING))
 		return attack_self(M)
 	return ..()
 
